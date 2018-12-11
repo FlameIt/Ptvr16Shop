@@ -17,11 +17,11 @@
        <h1>Page3 загружена</h1>
        <p>${info}</p>
        <h2>
-        <a href='index.html'>Главная страницы</a></h2>
+        <a href='index.html'>Главная страницы</a>
        <div>
             <c:forEach var="reader" items="${listReaders}">
                 <li>${reader.code},${reader.name},${reader.surname}</li>
             </c:forEach>
-        </div>
+        </div></h2>
     </body>
 </html>

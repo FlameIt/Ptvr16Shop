@@ -4,19 +4,23 @@
     Author     : pupil
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/index.css">
-         <link href="https://fonts.googleapis.com/css?family=Pacifico|Quicksand" rel="stylesheet">
+         <link rel="stylesheet" href="css/index.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page5</title>
+        <title>Page5</title>
     </head>
     <body>
-       <h1>Hello World</h1>
-       <p> ${info}</p>
-       <h2>
-       <a href='index.html'>Главная страницa</a></h2>
+        
+          <h1>Выдаем книгу</h1>
+                <div>
+                    <h2>
+                    <li>${history.reader.name} ${history.reader.surname} взял книгу ${history.book.name}</li>
+          
+               
+         <a href="index.html">На главную </a></h2>  </div>
     </body>
 </html>

@@ -19,13 +19,13 @@
         <p>${info}
         </p>
         <h2>
-        <a href='index.html'>Главная страницы</a></h2>
+        <a href='index.html'>Главная страницы</a>
         
         <div>
             <c:forEach var="book" items="${listBooks}">
                 <li>${book.name},${book.author},${book.isbn}</li>
             </c:forEach>
-        </div>
+        </div></h2>
    
     </body>
 </html>

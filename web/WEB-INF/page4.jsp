@@ -29,9 +29,9 @@
                 </c:forEach>
             </select>
                 <br>
-                <button type="submit" name="giveBook">Выдать книгу</button></h2>
+                <button type="submit" name="giveBook">Выдать книгу</button>
         </form>
         
-         <a href="index.html">На главную </a>
+         <a href="index.html">На главную </a></h2>
     </body>
 </html>
