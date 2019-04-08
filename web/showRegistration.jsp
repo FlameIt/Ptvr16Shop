@@ -1,26 +1,34 @@
-<%-- 
-    Document   : page4
-    Created on : Dec 6, 2018, 1:55:50 PM
-    Author     : pupil
---%>
+    </div>
+  </div>
+</nav>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-         <link rel="stylesheet" href="css/index.css">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Page5</title>
-    </head>
-    <body>
-        
-          <h1>Выдаем книгу</h1>
-                <div>
-                    <h2>
-                    <li>${history.reader.name} ${history.reader.surname} взял книгу ${history.book.name}</li>
-          
+       <div class="login-form">
+           <div class="control-group">
                
-         <a href="index.html">На главную </a></h2>  </div>
+        <h1>Зарегистрироваться</h1>
+        <form action="registration" method="POST" name="form1" >
+             Имя:<br>
+            <input type="text" id="nameCustomer" name="name"><br>
+             Фамилия:<br>
+            <input type="text" id="surname" name="surname"><br>
+              Email:<br>
+            <input type="text" id="email" name="email"><br>
+            Город:<br>
+            <input type="text" id="city" name="city"><br>
+             Деньги:<br>
+            <input type="text" id="cash" name="cash"><br>
+            <br>
+              Логин:<br>
+            <input type="text" name="login"><br>
+            Пароль:<br>
+            <input type="text" name="password1"><br>
+            Повторите пароль:<br>
+            <input type="text" name="password2"><br>
+            <br>
+            <input type="submit" value="Зарегистрироватся">
+         
+        </form><br>
+        
+        <script src="${pageContext.request.contextPath}/js/index.js"></script>
     </body>
 </html>
