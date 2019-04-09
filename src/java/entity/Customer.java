@@ -38,7 +38,7 @@ public class Customer implements Serializable {
        
     }
 
-    public Customer(String anastassiagolovanovaivkhkee, String anastassia, String golovanova) {
+    public Customer(String kekmekgmailcom, String Kek, String Mek) {
       
     }
 

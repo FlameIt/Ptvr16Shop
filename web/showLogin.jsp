@@ -1,25 +1,31 @@
-<a    
+<a
 </div>
   </div>
 </nav>
-<div style="text-align: center;" class="container">
-        <br>
-       <div class="login-form">
-           <div class="control-group">
-           
-        <h1>Login</h1></div>
-        <form action="login" method="POST">
-            Логин: <br>
-            <input type="text" name="login">
-            <br>
-             <div class="control-group">
-            Пароль: <br>
-            <input type="password" name="password">
-            <br> <br>
-            <input class="btn btn-primary" type="submit" value="Войти">
-            
-            </form> </div></div>
+
+
+
+<div class="container contact-form">
+            <div class="contact-image">
+                <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+            </div>
+            <form method="post">
+                <h3>Login</h3>
+               <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" name="login" class="form-control" placeholder="Your Login *" value="" required="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="Your Password *" value="" required="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnContact" value="Login" />
+                        </div>
+                    </div>
+                </div>
+            </form>
 </div>
-            
+
     </body>
 </html>

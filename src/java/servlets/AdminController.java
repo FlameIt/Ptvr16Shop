@@ -47,7 +47,7 @@ public class AdminController extends HttpServlet {
         if(!listUsers.isEmpty()){
             return;
         }
-         Customer customer = new Customer("anastassia","golovanova@gmail.com","golovanova","Johvi",500);
+         Customer customer = new Customer("kek","kekmek@gmail.com","mek","Moscow",500);
         customerFacade.create(customer);
         Encription encription = new Encription();
         String password = encription.getEncriptionPass("admin");
