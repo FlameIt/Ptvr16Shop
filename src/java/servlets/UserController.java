@@ -34,6 +34,7 @@ import utils.PagePathLoader;
 @WebServlet(name = "UserController", urlPatterns = {
     "/showListProducts",
     "/showProduct",
+    "/changePassword",
     
     
 })
@@ -97,6 +98,35 @@ public class UserController extends HttpServlet {
                 request.getRequestDispatcher(PagePathLoader.getPagePath("showProduct")).forward(request, response);
                 break;
         }
+
+        if(null != path) switch (path) {
+            case "/changePassword":
+                String username = regUser.getCustomer().getName()+" "+regUser.getCustomer().getSurname();
+                request.setAttribute("username", username);
+                String login = regUser.getLogin();
+                request.setAttribute("login", login);
+                request.getRequestDispatcher(PagePathLoader.getPagePath("changePassword")).forward(request, response);
+                
+                String oldPassword = request.getParameter("oldPassword");
+                String encriptOldPassword = encription.getEncriptionPass(oldPassword);
+                if(!encriptOldPassword.equals(regUser.getPassword())){
+                    request.setAttribute("info", "Вы должны войти");
+                    request.getRequestDispatcher("/showLogin").forward(request, response);
+                    break;
+                }
+                String newPassword1 = request.getParameter("newPassword1");
+                String newPassword2 = request.getParameter("newPassword2");
+                if(newPassword1.equals(newPassword2)){
+                    regUser.setPassword(encription.getEncriptionPass(newPassword1));
+                    userFacade.edit(regUser);
+                }
+                request.setAttribute("info", "Вы успешно изменили пароль");
+                request.getRequestDispatcher("/logout");
+                request.getRequestDispatcher("/showLogin").forward(request, response);
+                break;  
+        
+        
+    }
    }
     
 

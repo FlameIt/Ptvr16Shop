@@ -1,5 +1,6 @@
 
 <a class="navbar-brand" href="showPageForGiveProduct">Sell Product</a>   
+<a class="nav-link" href="changePassword">Change Password</a>
 <a class="navbar-brand" href="logout">Logout</a>
 </div>
   </div>

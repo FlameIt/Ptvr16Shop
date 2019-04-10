@@ -1,12 +1,24 @@
     </div>
   </div>
 </nav>
-        <h1>Список покупателей</h1>
-        ${info}<br>
-    
-        <ul>
-            <c:forEach var="customer" items="${listCustomers}">
-                <h2>${customer.name}, ${customer.surname}, ${customer.email}</h2>
-            </c:forEach>
-        </ul><a href="index">На главную </a></div>
 
+
+<div class="container contact-form">
+            <form method="post">
+                <h3>Список покупателей</h3>
+               <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <ol type="1">
+                                <c:forEach var="customer" items="${listCustomers}">
+                                    <li><h4>Имя: ${customer.name}<br> Фамилия: ${customer.surname}<br> Почта: ${customer.email}</h4></li>
+                                </c:forEach>
+                            </ol>
+                        </div>
+                        <div class="form-group">
+                            <a class="btn btn-dark" href="index">На главную </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+</div>

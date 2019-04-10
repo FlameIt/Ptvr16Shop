@@ -2,7 +2,8 @@
 <a class="navbar-brand" href="changePassword">Change Password</a>
 <a class="navbar-brand" href="showListCustomers">Customers</a>
 <a class="navbar-brand" href="showPageForGiveProduct">Sell Product</a>
-<a class="navbar-brand" href="showAddNewProduct">Add product</a>    
+<a class="navbar-brand" href="showAddNewProduct">Add product</a>
+<a class="nav-link" href="changePassword">Change Password</a>
 <a class="navbar-brand" href="logout">Logout</a>
 </div>
   </div>

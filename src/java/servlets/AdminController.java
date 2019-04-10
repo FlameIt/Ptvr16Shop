@@ -32,7 +32,7 @@ import utils.PagePathLoader;
  * @author 
  */
 @WebServlet(name = "AdminController", loadOnStartup = 1, urlPatterns = {
-     "/changePassword",
+//     "/changePassword",
 
 })
 public class AdminController extends HttpServlet {
@@ -100,35 +100,35 @@ public class AdminController extends HttpServlet {
         }
         request.setAttribute("role", rl.getRole(regUser));
         
-        String path = request.getServletPath();
-        if(null != path) switch (path) {
-            case "/changePassword":
-                String username = regUser.getCustomer().getName()+" "+regUser.getCustomer().getSurname();
-                request.setAttribute("username", username);
-                String login = regUser.getLogin();
-                request.setAttribute("login", login);
-                request.getRequestDispatcher(PagePathLoader.getPagePath("changePassword")).forward(request, response);
-                
-                String oldPassword = request.getParameter("oldPassword");
-                String encriptOldPassword = encription.getEncriptionPass(oldPassword);
-                if(!encriptOldPassword.equals(regUser.getPassword())){
-                    request.setAttribute("info", "Вы должны войти");
-                    request.getRequestDispatcher("/showLogin").forward(request, response);
-                    break;
-                }
-                String newPassword1 = request.getParameter("newPassword1");
-                String newPassword2 = request.getParameter("newPassword2");
-                if(newPassword1.equals(newPassword2)){
-                    regUser.setPassword(encription.getEncriptionPass(newPassword1));
-                    userFacade.edit(regUser);
-                }
-                request.setAttribute("info", "Вы успешно изменили пароль");
-                request.getRequestDispatcher("/logout");
-                request.getRequestDispatcher("/showLogin").forward(request, response);
-                break;  
-        
-        
-    }
+//        String path = request.getServletPath();
+//        if(null != path) switch (path) {
+//            case "/changePassword":
+//                String username = regUser.getCustomer().getName()+" "+regUser.getCustomer().getSurname();
+//                request.setAttribute("username", username);
+//                String login = regUser.getLogin();
+//                request.setAttribute("login", login);
+//                request.getRequestDispatcher(PagePathLoader.getPagePath("changePassword")).forward(request, response);
+//                
+//                String oldPassword = request.getParameter("oldPassword");
+//                String encriptOldPassword = encription.getEncriptionPass(oldPassword);
+//                if(!encriptOldPassword.equals(regUser.getPassword())){
+//                    request.setAttribute("info", "Вы должны войти");
+//                    request.getRequestDispatcher("/showLogin").forward(request, response);
+//                    break;
+//                }
+//                String newPassword1 = request.getParameter("newPassword1");
+//                String newPassword2 = request.getParameter("newPassword2");
+//                if(newPassword1.equals(newPassword2)){
+//                    regUser.setPassword(encription.getEncriptionPass(newPassword1));
+//                    userFacade.edit(regUser);
+//                }
+//                request.setAttribute("info", "Вы успешно изменили пароль");
+//                request.getRequestDispatcher("/logout");
+//                request.getRequestDispatcher("/showLogin").forward(request, response);
+//                break;  
+//        
+//        
+//    }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
