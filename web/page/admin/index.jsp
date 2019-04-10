@@ -1,9 +1,9 @@
 <a class="nav-link" href="showListProducts">Products</a>   
-<a class="nav-link" href="changePassword">Change Password</a>
+<a class="nav-link" id="changePassword" href="changePassword">Change Password</a>
 <a class="nav-link" href="showListCustomers">Customers</a>
-<a class="nav-link" href="showPageForGiveProduct">Sell Product</a>
-<a class="nav-link" href="showAddNewProduct">Add product</a>
-<a class="nav-link" href="showChangeRole">Change Role</a>
+<a class="nav-link" id="showPageForGiveProduct" href="showPageForGiveProduct">Sell Product</a>
+<a class="nav-link" id="showAddNewProduct" href="showAddNewProduct">Add product</a>
+<a class="nav-link" id="showChangeRole" href="showChangeRole">Change Role</a>
 <a style="float: left;text-align: right;" class="nav-item nav-link" href="logout">Logout</a>
 </div>
   </div>

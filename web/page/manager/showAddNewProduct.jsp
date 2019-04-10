@@ -27,7 +27,7 @@
                                 </select>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btn btn-dark" value="Добавить" /> <a class="btn btn-dark" href="index">На главную </a>
+                            <input type="submit" id="btnAdd" class="btn btn-dark" value="Добавить" /> <a class="btn btn-dark" href="index">На главную </a>
                         </div>
                     </div>
                 </div>

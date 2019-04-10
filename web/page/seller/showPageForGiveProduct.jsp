@@ -26,12 +26,14 @@
                             ${info}
                         </div>
                             <div class="form-group">
-                                    <select name="productId">
+                                    <select id="testdropdown1" name="productId">
+                                        <option disabled selected>Выберите продукт</option>
                                         <c:forEach var="productItem" items="${listProducts}">
                                             <option value="${productItem.id}">${productItem.name}</option>
                                         </c:forEach>
                                     </select>
-                                   <select name="customerId">
+                                   <select id="testdropdown2" name="customerId">
+                                       <option disabled selected>Выберите покупателя</option>
                                         <c:forEach var="customerItem" items="${listCustomers}">
                                             <option value="${customerItem.id}">${customerItem.name} ${customerItem.surname}</option>
                                         </c:forEach>
