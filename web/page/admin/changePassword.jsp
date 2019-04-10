@@ -31,6 +31,3 @@
     <input type="submit" class="btn btn-primary" value="Изменить пароль"><br><br>
             <a href="index" class="btn btn-primary" >На главную </a></div></ul>
         </form>
-</div>
-    </body>
-</html>

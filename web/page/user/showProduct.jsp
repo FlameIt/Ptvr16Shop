@@ -8,11 +8,6 @@
         <h1>Просмотр продуктов!</h1>
         
         
-                  <div class="footer">
-  <p>Footer</p>
-</div>
-    </body>
-</html>
 
 
 
@@ -25,11 +20,9 @@
                             <img src="insertFile/${cover.path}"  ><br>
                             Заголовок: ${product.name}<br>
                             Цена: ${product.price}<br>
-                            Доступно товаров: ${product.count}
+                            Доступно товаров: ${product.count}<br>
+                            <h4><a href="showListProducts" class="btn btn-dark">Обратно</a></h4>
                         </div>
                     </div>
                 </div>
 </div>
-
-    </body>
-</html>

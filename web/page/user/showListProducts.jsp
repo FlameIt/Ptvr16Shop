@@ -13,14 +13,11 @@
                     <div class="col-md-12">
                         <ul>
                         <c:forEach var="product" items="${listProducts}">
-                            <h2 style="color: black"><a href="showProduct?productId=${product.id}">${product.name}, Цена- ${product.price}, Количество -${product.count}</a></h2>
+                            <h2 style="color: black"><a href="showProduct?productId=${product.id}">${product.name}, Цена: ${product.price}, Количество: ${product.count}</a></h2>
                             </c:forEach>
-                        </ul> <a href="index">Главная страница</a><br>
+                        </ul> <a href="index" class="btn btn-dark"><h4>Главная страница</h4></a><br>
                     </div>
                 </div>
 </div>
         
         
-        <div class="footer">
-         </body
-                </html>

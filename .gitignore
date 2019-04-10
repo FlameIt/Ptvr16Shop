@@ -5,3 +5,6 @@
 /nbproject
 build.xml
 /conf
+/src/nbproject/private/
+/src/build/
+/src/dist/

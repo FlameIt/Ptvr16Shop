@@ -26,5 +26,3 @@
 
 
                 <a href="index">На главную </a></h2>  </div></div>
-    </body>
-</html>

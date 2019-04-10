@@ -17,8 +17,4 @@
             <input type="file" name="file"><br>
             <input type="submit" value="Загрузить">
         </form><a href="index">На главную </a>
-                  <div class="footer">
 
-</div>
-    </body>
-</html>

@@ -23,8 +23,4 @@
         </form></div>
                         <a href="index">На главную </a>
                 <div class="footer">
-  <p>Footer</p>
-</div>
-        
-    </body>
-</html>
+

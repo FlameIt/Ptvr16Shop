@@ -25,8 +25,4 @@
             <br>
             <input type="submit" value="Добавить книгу"><br>
         </form><a href="index">На главную </a>
-                  <div class="footer">
-  <p>Footer</p>
-</div>
-    </body>
-</html>
+

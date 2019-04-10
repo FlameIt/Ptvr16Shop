@@ -59,5 +59,3 @@
         
         <script src="${pageContext.request.contextPath}/js/index.js"></script>
 
-    </body>
-</html>
