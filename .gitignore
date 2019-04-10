@@ -7,4 +7,8 @@ build.xml
 /conf
 /src/nbproject/private/
 /src/build/
-/src/dist/
+/src/dist//build
+/dist
+/nbproject
+/conf
+build.xml
