@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package test;
+
 import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -16,72 +17,69 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+
 /**
  *
  * @author pupil
  */
 public class Selenium {
-    
+
     private static WebDriver driver;
-    
+
     public Selenium() {
     }
-    
+
     @BeforeClass // Выполняется один раз при запуске теста
     public static void setUpClass() {
-        System.setProperty("webdriver.chrome.driver", "lib/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "../lib/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://localhost:8080/Ptvr16Shop/");
     }
-    
-    
+
     @AfterClass // Запускается один раз после выплнения теста
     public static void tearDownClass() throws InterruptedException {
         Thread.sleep(3000);
         driver.quit();
-        
+
     }
-    
+
     @Before // Выполняется один раз перед каждой функцией теста
     public void setUp() {
     }
-    
+
     @After // Выполняется один раз после каждой функции теста
     public void tearDown() {
     }
 
-    public void enterTest(){
+    public void enterTest() {
         System.out.println("Вход");
         WebElement el = driver.findElement(By.id("showLogin"));
-         el.click();
-         el = driver.findElement(By.id("login"));
-         el.sendKeys("admin");
-         el = driver.findElement(By.id("password"));
-         el.sendKeys("admin");
-         el = driver.findElement(By.id("btnEnter"));
-         el.click();
+        el.click();
+        el = driver.findElement(By.id("login"));
+        el.sendKeys("admin");
+        el = driver.findElement(By.id("password"));
+        el.sendKeys("admin");
+        el = driver.findElement(By.id("btnEnter"));
+        el.click();
     }
-     @Test
-     public void webAppTest() {
+
+    @Test
+    public void webAppTest() {
 //            registration();
-            enterTest();
-         WebElement el = driver.findElement(By.id("info"));
-         System.out.println("Вход произведен");
+        enterTest();
+        WebElement el = driver.findElement(By.id("changePassword"));
             showAddNewProduct();
             showPageForGiveProduct();
-            showPageForReturnBook();
             showChangePassword();
-            showChangeRole();
-            ChangeRoleBack();
-         System.out.println("Выход");
-         el = driver.findElement(By.id("logout"));
-         el.click();
-         el = driver.findElement(By.id("info"));
-         assertEquals("Вы вышли!", el.getText());
-         System.out.println("Выход произведен");
-     }
-     
+        showChangeRole();
+        ChangeRoleBack();
+        System.out.println("Выход");
+        el = driver.findElement(By.id("logout"));
+        el.click();
+        System.out.println("Выход произведен");
+    }
+
 //     public void registration() {
 //         WebElement el = driver.findElement(By.id("showRegistration"));
 //         el.click();
@@ -98,11 +96,15 @@ public class Selenium {
 //         el.sendKeys("TestPassword");
 //         el= driver.findElement(By.name("password2"));
 //         el.sendKeys("TestPassword");
+//         el= driver.findElement(By.name("city"));
+//         el.sendKeys("TestCity");
+//         el= driver.findElement(By.name("cash"));
+//         el.sendKeys("500");
 //         el= driver.findElement(By.id("btnReg"));
 //         el.click();
 //         System.out.println("Регистрация закончена");
 //     }
-//     
+     
      public void showAddNewProduct() {
          System.out.println("Добавление тестового продукта");
          WebElement el = driver.findElement(By.id("showAddNewProduct"));
@@ -116,7 +118,14 @@ public class Selenium {
          el = driver.findElement(By.id("btnAdd"));
          el.click();
          System.out.println("Продукт добавлен");
-         
+         el = driver.findElement(By.id("showLogin"));
+        el.click();
+        el = driver.findElement(By.id("login"));
+        el.sendKeys("admin");
+        el = driver.findElement(By.id("password"));
+        el.sendKeys("admin");
+        el = driver.findElement(By.id("btnEnter"));
+        el.click();
      }
      
      public void showPageForGiveProduct(){
@@ -126,24 +135,24 @@ public class Selenium {
          Select dropdown1 = new Select(driver.findElement(By.id("testdropdown1")));
          dropdown1.selectByVisibleText("TestProduct");
          Select dropdown2 = new Select(driver.findElement(By.id("testdropdown2")));
-         dropdown2.selectByVisibleText("TestName TestSurname");
+        dropdown2.selectByValue("2");
          el = driver.findElement(By.id("BtnGive"));
          el.click();
-         System.out.println("Книга выдана");
+         System.out.println("Продукт выдан");
+         el = driver.findElement(By.id("showLogin"));
+         el.click();
+        el = driver.findElement(By.id("login"));
+        el.sendKeys("admin");
+        el = driver.findElement(By.id("password"));
+        el.sendKeys("admin");
+        el = driver.findElement(By.id("btnEnter"));
+        el.click();
      }
      
-     public void showPageForReturnBook(){
-         System.out.println("Возврат тестовой книги");
-         WebElement el = driver.findElement(By.id("showPageForReturnBook"));
-         el.click();
-         el = driver.findElement(By.id("BtnReturn"));
-         el.click();
-         System.out.println("Книга возвращена");
-     }
      
      public void showChangePassword(){
          System.out.println("Изменение пароля");
-         WebElement el = driver.findElement(By.id("showChangePassword"));
+         WebElement el = driver.findElement(By.id("changePassword"));
          el.click();
          el = driver.findElement(By.name("oldPassword"));
          el.sendKeys("admin");
@@ -154,14 +163,6 @@ public class Selenium {
          el = driver.findElement(By.id("BtnChangePass"));
          el.click();
          System.out.println("Пароль изменен на новый admin1");
-         el = driver.findElement(By.id("login"));
-         el.sendKeys("admin");
-         el = driver.findElement(By.id("password"));
-         el.sendKeys("admin1");
-         el = driver.findElement(By.id("btnEnter"));
-         el.click();
-         el = driver.findElement(By.id("showChangePassword"));
-         el.click();
          el = driver.findElement(By.name("oldPassword"));
          el.sendKeys("admin1");
          el = driver.findElement(By.name("newPassword1"));
@@ -171,41 +172,37 @@ public class Selenium {
          el = driver.findElement(By.id("BtnChangePass"));
          el.click();
          System.out.println("Пароль изменен на старый admin");
-         el = driver.findElement(By.id("login"));
-         el.sendKeys("admin");
-         el = driver.findElement(By.id("password"));
-         el.sendKeys("admin");
-         el = driver.findElement(By.id("btnEnter"));
+         System.out.println("Тест с изменением пароля пройден");
+         el=driver.findElement(By.id("backIndex"));
          el.click();
      }
-     public void showChangeRole(){
-         System.out.println("Изменение роли");
-         WebElement el = driver.findElement(By.id("showChangeRole"));
-         el.click();
-         
-         driver.findElement(By.xpath("//input[@type='radio'][1]")).click();
-         
-         
-         Select dropdown = new Select(driver.findElement(By.id("testdropdown")));
-         dropdown.selectByValue("2");
+    public void showChangeRole() {
+        System.out.println("Изменение роли");
+        WebElement el = driver.findElement(By.id("showChangeRole"));
+        el.click();
+
+        driver.findElement(By.xpath("//input[@type='radio'][1]")).click();
+
+        Select dropdown = new Select(driver.findElement(By.id("testdropdown")));
+        dropdown.selectByValue("2");
          el = driver.findElement(By.id("BtnAccept"));
          el.click();
          System.out.println("Роль тестового пользователя изменена на администратора");
-         el = driver.findElement(By.id("main"));
+         el = driver.findElement(By.id("backIndex"));
          el.click();
-     }
-         
-     public void ChangeRoleBack(){
-         System.out.println("Изменение роли обратно");
-         WebElement el = driver.findElement(By.id("showChangeRole"));
-         el = driver.findElement(By.id("showChangeRole"));
-         el.click();
-         Select dropdown = new Select(driver.findElement(By.id("testdropdown")));
-         dropdown.selectByValue("2");
-         el = driver.findElement(By.id("BtnAccept"));
-         el.click();
-         System.out.println("Роль тестового пользователя изменена на юзера");
-         el = driver.findElement(By.id("main"));
-         el.click();
-     }
+    }
+
+    public void ChangeRoleBack() {
+        System.out.println("Изменение роли обратно");
+        WebElement el = driver.findElement(By.id("showChangeRole"));
+        el = driver.findElement(By.id("showChangeRole"));
+        el.click();
+        Select dropdown = new Select(driver.findElement(By.id("testdropdown")));
+        dropdown.selectByValue("2");
+        el = driver.findElement(By.id("BtnAccept"));
+        el.click();
+        System.out.println("Роль тестового пользователя изменена на юзера");
+        el = driver.findElement(By.id("backIndex"));
+        el.click();
+    }
 }

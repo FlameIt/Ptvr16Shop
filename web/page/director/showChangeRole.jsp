@@ -22,7 +22,7 @@
                                 </c:if>    
 
                             </c:forEach>
-                            <select name="userId" >
+                            <select id="testdropdown" name="userId" >
                                 <option value="#" selected></option>
                                 <c:forEach var="entry" items="${mapUsers}">
                                     <option value="${entry.key.id}">${entry.key.login}: "${entry.value.name}"</option>
@@ -30,7 +30,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnContact" value="Назначить" />
+                            <input type="submit" class="btnAccept" value="Назначить" />
                         </div>
                         <div class="form-group">
                             <a class="btn btn-dark" href="index">На главную </a>

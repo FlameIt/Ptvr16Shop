@@ -22,20 +22,20 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="password"> Введите действующий пароль: </label>
-                            <input type="password" name="oldPassword" class="form-control" id="exampleInputEmail1" aria-describedby="login" placeholder="Enter password">
+                            <input type="password" id="oldPassword" name="oldPassword" class="form-control" id="exampleInputEmail1" aria-describedby="login" placeholder="Enter password">
                             <small id="emailHelp" class="form-text text-muted">Введите ваш пароль:</small>
                                      <label for="password">   Введите новый пароль: </label>
-                            <input type="password" name="newPassword1" class="form-control" id="exampleInputEmail1" aria-describedby="login" placeholder="Enter new  password">
+                            <input type="password" id="newPassword1" name="newPassword1" class="form-control" id="exampleInputEmail1" aria-describedby="login" placeholder="Enter new  password">
                             <small id="emailHelp" class="form-text text-muted">Введите ваш новый пароль:</small>
                                     <label for="password">   Повторите пароль:</label>
-                            <input type="password" name="newPassword2" class="form-control" id="exampleInputEmail1" aria-describedby="login" placeholder="Enter confirm password">
+                            <input type="password" id="newPassword2" name="newPassword2" class="form-control" id="exampleInputEmail1" aria-describedby="login" placeholder="Enter confirm password">
                             <small id="emailHelp" class="form-text text-muted">Введите ваш новый пароль:</small>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnContact" placeholder="Изменить пароль" />
+                            <input type="submit" id="BtnChangePass" class="btnContact" placeholder="Изменить пароль" />
                         </div>
                         <div class="form-group">
-                            <a class="btn btn-dark" href="index">На главную </a>
+                            <a class="btn btn-dark" id="backIndex" href="index">На главную </a>
                         </div>
                     </div>
                 </div>

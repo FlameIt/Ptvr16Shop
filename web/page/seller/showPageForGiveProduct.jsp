@@ -18,11 +18,10 @@
                 <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
             </div>
             <form action="giveProduct" method="POST">
-                <h3>Login</h3>
+                <h3>Выдать продукт покупателю</h3>
                <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <h1>Выдать продукт покупателю</h1>
                             ${info}
                         </div>
                             <div class="form-group">
@@ -38,7 +37,7 @@
                                             <option value="${customerItem.id}">${customerItem.name} ${customerItem.surname}</option>
                                         </c:forEach>
                                    </select>
-                                    <input type="submit" class="btn btn-dark" value="Выдать продукт">
+                                    <input type="submit" id="BtnGive" class="btn btn-dark" value="Выдать продукт">
                             </div>
                         <div class="form-group">
                             <a class="btn btn-dark" href="index"><h4>Главная страница</h4></a>

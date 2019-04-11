@@ -14,13 +14,13 @@
                <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <input type="text" name="login" class="form-control" placeholder="Your Login *" value="" required="" />
+                            <input id="login" type="text" name="login" class="form-control" placeholder="Your Login *" value="" required="" />
                         </div>
                         <div class="form-group">
-                            <input type="password" name="password" class="form-control" placeholder="Your Password *" value="" required="" />
+                            <input id="password" type="password" name="password" class="form-control" placeholder="Your Password *" value="" required="" />
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnContact" value="Login" />
+                            <input id="btnEnter" type="submit" class="btnContact" value="Login" />
                         </div>
                     </div>
                 </div>

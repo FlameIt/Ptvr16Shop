@@ -7,7 +7,7 @@
                         <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
                         <h3>Welcome</h3>
                         <p>Зарегистрироваться или войти!</p>
-                        <a href="login"><input type="submit" name="" value="Login"/></a><br/>
+                        <a href="login"><input type="submit" value="Login"/></a><br/>
                     </div>
                     <div class="col-md-9 register-right">
                         <div class="tab-content" id="myTabContent">
@@ -15,7 +15,7 @@
                                 <h3 class="register-heading">Регистрация</h3>
                                 <div class="row register-form">
                                     <div class="col-md-6">
-                                        <form action="registration" method="POST" name="form1">
+                                        <form action="registration" id="showRegistration" method="POST" name="form1">
                                             <div class="form-group">
                                                 <input type="text" name="name" id="nameCustomer" class="form-control" placeholder="First Name *" value="" required="" />
                                             </div>
@@ -41,7 +41,7 @@
                                                 <input type="text" name="cash" id="cash" class="form-control" placeholder="Cash *" value="" required="" />
                                             </div>
                                             <div class="form-group">
-                                                <input type="submit" class="btnRegister"  value="Register" />
+                                                <input type="submit" id="btnReg" class="btnRegister"  value="Register" />
                                             </div>
                                         </form>
 

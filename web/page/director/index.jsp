@@ -26,12 +26,6 @@
 
  ${info}<br>
          <img style="width: 80%;" src="images//dd.jpg">
-<footer>
-  <div class="footer-copyright text-center py-3">© 2019 Copyright: Daniil Bedritski JPTVR16
-    
-  </div>
-  <!-- Copyright -->
 
-</footer>
     </body>
 </html>
