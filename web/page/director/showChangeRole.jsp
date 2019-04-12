@@ -30,10 +30,10 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnAccept" value="Назначить" />
+                            <input type="submit" id="BtnAccept" value="Назначить" />
                         </div>
                         <div class="form-group">
-                            <a class="btn btn-dark" href="index">На главную </a>
+                            <a class="btn btn-dark" id="backIndex" href="index">На главную </a>
                         </div>
                     </div>
                 </div>
